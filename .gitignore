@@ -1,0 +1,14 @@
+
+# IDE
+.vscode
+.idea
+# platfrom
+.DS_Store
+
+#  build
+build
+out
+compile_commands.json
+.cache
+
+cmake-build-default-multi---release-build-preset

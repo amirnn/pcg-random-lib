@@ -1,0 +1,48 @@
+{
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 29,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "default-multi",
+            "displayName": "default-multi",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "out"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug-build-preset",
+            "description": "Debug build",
+            "displayName": "",
+            "configurePreset": "default-multi",
+            "configuration": "Debug",
+            "targets": [
+                "all"
+            ]
+        },
+        {
+            "name": "release-with-debug-info-build-preset",
+            "description": "RelWithDebInfo build",
+            "displayName": "",
+            "configurePreset": "default-multi",
+            "configuration": "RelWithDebInfo",
+            "targets": [
+                "all"
+            ]
+        },
+        {
+            "name": "release-build-preset",
+            "description": "Release build",
+            "displayName": "",
+            "configurePreset": "default-multi",
+            "configuration": "Release",
+            "targets": [
+                "all"
+            ]
+        }
+    ]
+}
