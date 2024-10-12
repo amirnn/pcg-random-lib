@@ -2,7 +2,7 @@
 
 int main()
 {
-    
+
     {
         auto const t1 = std::chrono::steady_clock::now();
 
