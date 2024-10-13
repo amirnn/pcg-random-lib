@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.29.0)
 project(pcg-random-lib VERSION 0.1.0 LANGUAGES C CXX)
 
+# make cache variables for install destinations
+include(GNUInstallDirs)
+
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
@@ -23,3 +26,10 @@ endif ()
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/src")
 
+install(TARGETS ${LIBRARY_NAME}
+        EXPORT ${LIBRARY_NAME}Targets
+        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+        INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
